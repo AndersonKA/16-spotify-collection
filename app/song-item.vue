@@ -3,7 +3,9 @@
     <div class="panel-block">
       <div class="media is-fullwidth">
         <div class="media-left">
-          <img v-bind:src="track.images">
+
+            <img v-bind:src="track.album.images[0].url" class="track__frame">
+
         </div>
 
         <div class="media-content">
@@ -25,6 +27,7 @@ export default {
 
   data() {
     return {
+      images: []
     };
   },
 

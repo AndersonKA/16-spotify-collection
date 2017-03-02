@@ -1,20 +1,17 @@
 <template lang="html">
     <div class="page">
-    <div class="section">
-      <div class="container">
+      <div class="section">
         <div class="panel">
-          <div class="panel-heading">
-          Bastille
-        </div>
-          <div class="results">
-            <song-item v-for="item in tracks" v-bind:track="item"></song-item>
+
+            <div class="panel-heading">
+              Bastille
+            </div>
+            <div class="results">
+              <song-item v-for="item in tracks" v-bind:track="item"></song-item>
           </div>
-          </div>
         </div>
-      </div>
+      </div><!--section-->
     </div>
-
-
 
 </template>
 
@@ -33,7 +30,6 @@ export default {
       .then(response => response.json())
       .then((data) => {
         this.tracks = data.tracks.items;
-        console.log(this.tracks);
       });
   },
   data() {
