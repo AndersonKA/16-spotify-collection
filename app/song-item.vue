@@ -3,12 +3,12 @@
     <div class="panel-block">
       <div class="media is-fullwidth">
         <div class="media-left">
-          <img src="http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-21.jpg" alt="" class="track__frame">
+          <img v-bind:src="track.images">
         </div>
 
         <div class="media-content">
-          <div class="track__artist">something</div>
-          <div class="track__name">else</div>
+          <div class="track__artist">{{ track.artists[0].name }}</div>
+          <div class="track__name">{{ track.name }}</div>
         </div>
 
         <div class="media-right">

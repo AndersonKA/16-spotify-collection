@@ -5,6 +5,7 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'box-sizing';
 
 $white: hsl(0, 0%, 21%);
+$c-green: #00d1b2;
 
 @import 'bulma';
 @import 'font-awesome';
@@ -51,6 +52,11 @@ $white: hsl(0, 0%, 21%);
 
     color: #fff;
   }
+}
+
+.fa {
+  color: $c-green;
+  font-size: 3rem;
 }
 
 .media.is-fullwidth { width: 100%; }
