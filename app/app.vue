@@ -1,24 +1,18 @@
 <template lang="html">
-  <div class="app">
+    <div class="page">
     <div class="section">
       <div class="container">
-
         <div class="panel">
-          <p class="panel-heading">
-            Bastille
-          </p>
+          <div class="panel-heading">
+          Stuff
+        </div>
 
-          <!--<div class="panel-block level-left">-->
-            <span class="panel-block level-item">Song
-
-
-          </span>
           <song-item v-for="item in repositories" v-bind:track="item"></song-item>
-
           </div>
         </div>
       </div>
     </div>
+
 
 
 </template>
@@ -36,15 +30,14 @@ export default {
   created() {
     fetch('https://api.spotify.com/v1/search?query=bastille&type=track&offset=0&limit=20')
       .then(response => response.json())
-      .then((track) => {
-        this.repositories = track;
+      .then((tracks) => {
+        this.repositories = tracks;
       });
   },
   data() {
     return {
-      profile: {
+      track: {
         artist: 'Bastille',
-        name: 'Pompeii'
       },
       repositories: [
         { name: 'Pompeii' },
